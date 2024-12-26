@@ -1,0 +1,2 @@
+module SellInsHelper
+end
