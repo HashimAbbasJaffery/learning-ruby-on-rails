@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Ins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="text-white">
+        <div class="logo container mx-auto w-2/3 mt-4">
+        <%= image_tag 'logo.png', width: 200 %>
+        </div>
+        <div class="menu bg-gray-500 mt-3">
+            <ul class="container mx-auto w-2/3 flex">
+              <li class="px-3 py-2 cursor-pointer hover:bg-red-600 <%= 'bg-red-600' if request.path == '/trade_ins/new' %>">
+                  <a href="/trade_ins/new">Trade in my machine</a>
+                </li>
+<li class="px-3 py-2 cursor-pointer hover:bg-red-600 <%= 'bg-red-600' if request.path == '/sells/new' %>">
+                  <a href="/sells/new">Sell my machine</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
-
-  <body>
     <%= yield %>
-  </body>
+
+</body>
 </html>

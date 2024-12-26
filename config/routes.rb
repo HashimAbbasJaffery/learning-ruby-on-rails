@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
 
   resources :trade_ins
+  resources :sells
 
   # Defines the root path route ("/")
   # root "posts#index"
